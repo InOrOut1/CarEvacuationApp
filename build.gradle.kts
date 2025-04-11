@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.1"
+version = "0.0.2"
 
 application {
     mainClass = "io.ktor.server.netty.EngineMain"
@@ -21,6 +21,8 @@ repositories {
 }
 
 dependencies {
+    implementation("io.ktor:ktor-server-netty:3.1.2")
+    implementation("io.ktor:ktor-server-core:3.1.2")
     implementation("io.ktor:ktor-server-core")
     implementation("io.ktor:ktor-server-auth")
     implementation("io.ktor:ktor-server-netty")
