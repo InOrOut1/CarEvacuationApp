@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.2"
+version = "0.0.3"
 
 application {
     mainClass = "io.ktor.server.netty.EngineMain"
@@ -30,4 +30,10 @@ dependencies {
     implementation("io.ktor:ktor-server-config-yaml")
     testImplementation("io.ktor:ktor-server-test-host")
     testImplementation("org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version")
+}
+
+tasks.jar {
+    manifest {
+        attributes["Main-Class"] = "com.example.MainKt"
+    }
 }
