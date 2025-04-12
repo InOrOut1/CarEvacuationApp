@@ -7,10 +7,10 @@ plugins {
 }
 
 group = "com.example"
-version = "0.0.3"
+version = "0.0.4"
 
 application {
-    mainClass = "io.ktor.server.netty.EngineMain"
+    mainClass = "com.example.ApplicationKt"
 
     val isDevelopment: Boolean = project.ext.has("development")
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
@@ -34,6 +34,6 @@ dependencies {
 
 tasks.jar {
     manifest {
-        attributes["Main-Class"] = "com.example.MainKt"
+        attributes["Main-Class"] = "com.example.ApplicationKt"
     }
 }
